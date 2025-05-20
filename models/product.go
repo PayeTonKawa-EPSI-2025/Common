@@ -9,9 +9,9 @@ type ProductDetails struct {
 }
 
 type Product struct {
-	ID        string          `json:"id" gorm:"primaryKey;column:id"`
-	Name      string          `json:"name" gorm:"column:name"`
-	CreatedAt time.Time       `json:"createdAt" gorm:"column:created_at;autoCreateTime"`
-	Stock     uint            `json:"stock" gorm:"column:stock"`
-	Details   *ProductDetails `json:"details,omitempty" gorm:"embedded;embeddedPrefix:details_"`
+	ID        string         `json:"id" gorm:"primaryKey;column:id"`
+	Name      string         `json:"name" gorm:"column:name"`
+	CreatedAt time.Time      `json:"createdAt" gorm:"column:created_at;autoCreateTime"`
+	Stock     uint           `json:"stock" gorm:"column:stock"`
+	Details   ProductDetails `json:"details,omitempty" gorm:"embedded;embeddedPrefix:details_"`
 }

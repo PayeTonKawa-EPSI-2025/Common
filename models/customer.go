@@ -24,9 +24,9 @@ type Customer struct {
 	Name      string    `json:"name" gorm:"column:name"`
 	CreatedAt time.Time `json:"createdAt" gorm:"column:created_at;autoCreateTime"`
 
-	Address *Address `json:"address,omitempty" gorm:"embedded;embeddedPrefix:address_"`
-	Profile *Profile `json:"profile,omitempty" gorm:"embedded;embeddedPrefix:profile_"`
-	Company *Company `json:"company,omitempty" gorm:"embedded;embeddedPrefix:company_"`
+	Address Address `json:"address,omitempty" gorm:"embedded;embeddedPrefix:address_"`
+	Profile Profile `json:"profile,omitempty" gorm:"embedded;embeddedPrefix:profile_"`
+	Company Company `json:"company,omitempty" gorm:"embedded;embeddedPrefix:company_"`
 
 	Orders []Order `json:"orders,omitempty" gorm:"-"`
 }
