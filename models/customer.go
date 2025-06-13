@@ -17,7 +17,7 @@ type Company struct {
 }
 
 type Customer struct {
-	ID        string    `gorm:"primaryKey;column:id" json:"id"`
+	ID        uint      `gorm:"primaryKey;column:id" json:"id"`
 	Username  string    `json:"username" gorm:"column:username"`
 	FirstName string    `json:"firstName" gorm:"column:first_name"`
 	LastName  string    `json:"lastName" gorm:"column:last_name"`
