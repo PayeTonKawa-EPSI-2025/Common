@@ -9,7 +9,7 @@ type ProductDetails struct {
 }
 
 type Product struct {
-	ID        string         `json:"id" gorm:"primaryKey;column:id"`
+	ID        uint           `json:"id" gorm:"primaryKey;column:id"`
 	Name      string         `json:"name" gorm:"column:name"`
 	CreatedAt time.Time      `json:"createdAt" gorm:"column:created_at;autoCreateTime"`
 	Stock     uint           `json:"stock" gorm:"column:stock"`
